@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FISHAO Browser</title>
 <meta name="description" content="A desktop browser for playing FISHAO and other Flash games on Windows. Free download, includes Flash Player plugin.">
+<link rel="icon" type="image/png" sizes="256x256" href="app-icon.png">
+<link rel="apple-touch-icon" href="app-icon.png">
 <style>
 /* FISHAO Browser landing page.
    Flat, single-accent design. No gradients, no glow, no icon soup.
@@ -23,6 +25,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
     margin: 0;
     background: var(--ink);
@@ -243,5 +246,35 @@ h2 { font-size: 22px; margin: 0 0 22px; }
 
 </main>
 
+<script>
+/* Slow, eased scrolling for in-page anchors (Portable .zip → download cards).
+   The CSS scroll-behavior:smooth duration isn't controllable, so this animates
+   the scroll manually over ~900ms. Falls back to the native jump when the user
+   has reduced-motion enabled. */
+(function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.style.scrollBehavior = 'auto';   // JS owns the animation
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        var startY = window.scrollY;
+        var endY = target.getBoundingClientRect().top + startY - 64;  // clear the sticky header
+        var dist = endY - startY;
+        if (Math.abs(dist) < 2) return;
+        var dur = 900, t0 = null;
+        function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+        function frame(now) {
+            if (t0 === null) t0 = now;
+            var p = Math.min(1, (now - t0) / dur);
+            window.scrollTo(0, startY + dist * ease(p));
+            if (p < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+    });
+})();
+</script>
 </body>
 </html>
