@@ -72,12 +72,13 @@ h1 { font-size: 40px; margin: 0 0 16px; max-width: 21em; }
     transition: background .15s ease, border-color .15s ease;
 }
 .btn:hover { text-decoration: none; }
-.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
-.btn-red:hover { background: #dd6464; }
+.btn-blue { background: #2f81d4; border-color: #2f81d4; color: #fff; }
+.btn-blue:hover { background: #3e8fe0; border-color: #3e8fe0; }
 .btn-plain { background: transparent; color: var(--text); }
 .btn-plain:hover { background: var(--panel); border-color: var(--accent); }
-.btn-discord { background: #4e5bd4; border-color: #4e5bd4; color: #fff; }
-.btn-discord:hover { background: #5c69e0; }
+.btn-discord { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+.btn-discord:hover { background: #8b5cf6; border-color: #8b5cf6; }
+.btn-discord svg { flex: 0 0 auto; margin-right: 8px; vertical-align: -3px; }
 .sub { font-size: 13px; color: var(--dim); margin: 0; }
 
 /* ---------- sections ---------- */
@@ -168,7 +169,7 @@ footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
         <nav>
             <a href="#download">Download</a>
             <a href="#guide">Guide</a>
-            <a class="keep" href="https://discord.gg/Yrs9DYkkpB" target="_blank" rel="noopener">Discord ↗</a>
+            <a class="keep" href="https://discord.gg/Yrs9DYkkpB" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2.5px;margin-right:5px" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.9 3l-.2.4c1.6.4 2.9 1 4.1 1.9a16.2 16.2 0 0 0-13.6 0A10.9 10.9 0 0 1 10.3 3.4L10.1 3a19.8 19.8 0 0 0-4.4 1.4C2.9 8.6 2.1 12.7 2.5 16.7a19.9 19.9 0 0 0 6 3l.5-.7a12.8 12.8 0 0 1-2.2-1l.5-.4a14.2 14.2 0 0 0 12.4 0l.5.4a12.8 12.8 0 0 1-2.2 1l.5.8a19.9 19.9 0 0 0 6-3.1c.5-4.7-.8-8.7-3.2-12.3ZM8.7 14.2c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.9 2.1-1.9 2.1Zm6.6 0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></svg>Discord ↗</a>
         </nav>
     </div>
 </header>
@@ -185,9 +186,9 @@ footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
             included and loads automatically</strong>, nothing to install or configure.
         </p>
         <div class="cta">
-            <a class="btn btn-red" href="https://github.com/stelios913/FishaoBrowser/releases/latest/download/fishao-browser-setup.exe">Download for Windows</a>
+            <a class="btn btn-blue" href="https://github.com/stelios913/FishaoBrowser/releases/latest/download/fishao-browser-setup.exe">Download for Windows</a>
             <a class="btn btn-plain" href="https://github.com/stelios913/FishaoBrowser/releases/latest/download/fishao-browser-1.12.0-win64.zip">Portable .zip</a>
-            <a class="btn btn-discord" href="https://discord.gg/Yrs9DYkkpB" target="_blank" rel="noopener">Discord</a>
+            <a class="btn btn-discord" href="https://discord.gg/Yrs9DYkkpB" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.9 3l-.2.4c1.6.4 2.9 1 4.1 1.9a16.2 16.2 0 0 0-13.6 0A10.9 10.9 0 0 1 10.3 3.4L10.1 3a19.8 19.8 0 0 0-4.4 1.4C2.9 8.6 2.1 12.7 2.5 16.7a19.9 19.9 0 0 0 6 3l.5-.7a12.8 12.8 0 0 1-2.2-1l.5-.4a14.2 14.2 0 0 0 12.4 0l.5.4a12.8 12.8 0 0 1-2.2 1l.5.8a19.9 19.9 0 0 0 6-3.1c.5-4.7-.8-8.7-3.2-12.3ZM8.7 14.2c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.9 2.1-1.9 2.1Zm6.6 0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></svg>Discord ↗</a>
         </div>
         <p class="sub">Installer ~197 MB · works on 64-bit and 32-bit Windows · also runs on Windows 7 and 8</p>
     </div>
@@ -216,7 +217,7 @@ footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
                 <h3>Installer</h3>
                 <p class="tag">Recommended</p>
                 <p>Guided setup with license and folder choice. Adds a Start-menu entry and a proper uninstaller.</p>
-                <a class="btn btn-red" href="https://github.com/stelios913/FishaoBrowser/releases/latest/download/fishao-browser-setup.exe">Download setup.exe</a>
+                <a class="btn btn-blue" href="https://github.com/stelios913/FishaoBrowser/releases/latest/download/fishao-browser-setup.exe">Download setup.exe</a>
             </div>
             <div class="down">
                 <h3>Portable</h3>
