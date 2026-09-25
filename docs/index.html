@@ -91,7 +91,6 @@ h2 { font-size: 22px; margin: 0 0 22px; }
     display: block; width: 100%; border: 1px solid var(--edge);
     border-radius: 10px; background: var(--panel);
 }
-.shot-note { font-size: 12.5px; color: var(--dim); margin: 10px 0 0; }
 .shot-ph {
     height: 180px; display: flex; align-items: center; justify-content: center;
     color: var(--dim); font-size: 14px;
@@ -145,11 +144,6 @@ h2 { font-size: 22px; margin: 0 0 22px; }
 .notice.red { border-color: rgba(208,86,86,.45); }
 .notice.red b { color: var(--red); }
 
-/* ---------- footer ---------- */
-footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
-.foot { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-size: 13px; color: var(--dim); }
-.foot .links { display: flex; gap: 18px; }
-
 @media (max-width: 720px) {
     h1 { font-size: 30px; }
     .downs { grid-template-columns: 1fr; }
@@ -197,7 +191,6 @@ footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
     <section>
         <h2>What this is</h2>
         <img class="shot" src="screenshot.png" alt="FISHAO Browser running fishao.com" onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'shot shot-ph',textContent:'Add a screenshot.png next to this page to show the browser here'}))">
-        <p class="shot-note">Take your own with <b>Win+Shift+S</b> while the browser is open, save it as <code>screenshot.png</code> next to this file, and push — the page picks it up automatically.</p>
 
         <dl class="facts" style="margin-top:34px">
             <div><dt>Purpose</dt><dd>One job: run FISHAO and other Flash Player content on modern Windows, years after Flash's end of life.</dd></div>
@@ -249,16 +242,6 @@ footer { border-top: 1px solid var(--edge); padding: 28px 0 44px; }
     </section>
 
 </main>
-
-<footer>
-    <div class="wrap foot">
-        <span>MIT license. FISHAO is a game by its respective owners; this is a community browser, not an official one. Adobe and Flash are trademarks of Adobe.</span>
-        <span class="links">
-            <a href="https://github.com/stelios913/FishaoBrowser" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://discord.gg/Yrs9DYkkpB" target="_blank" rel="noopener">Discord</a>
-        </span>
-    </div>
-</footer>
 
 </body>
 </html>
